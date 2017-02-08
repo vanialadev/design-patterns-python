@@ -17,8 +17,8 @@ if __name__== '__main__':
 
     orcamento = Orcamento(500)
 
-    calculador.realiza_calculo(orcamento, ISS().calcula())
-    calculador.realiza_calculo(orcamento, ICMS().calcula())
+    calculador.realiza_calculo(orcamento, ISS().calcula)
+    calculador.realiza_calculo(orcamento, ICMS().calcula)
 
     #orientado a objetos
 
