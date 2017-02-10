@@ -1,4 +1,3 @@
-
 class Orcamento(object):
 
     def __init__(self):
@@ -40,4 +39,3 @@ class Item(object):
     @property
     def nome(self):
         return self.__nome
-

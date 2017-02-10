@@ -1,4 +1,4 @@
-from impostos import ISS, ICMS
+from impostos import ISS, ICMS, ICPP, IKCV
 
 class Calculador_de_imposto(object):
 
@@ -6,19 +6,28 @@ class Calculador_de_imposto(object):
 
         imposto_calculado = imposto.calcula(orcamento)
 
-        print(imposto_calculado)
+        print('%.2f' % imposto_calculado)
 
 
 if __name__== '__main__':
 
-    from orcamento import Orcamento
+    from orcamento import Orcamento, Item
 
     calculador = Calculador_de_imposto()
 
-    orcamento = Orcamento(500)
+    orcamento = Orcamento()
+
+    orcamento.adiciona_item(Item('ITEM - 1', 50))
+    orcamento.adiciona_item(Item('ITEM - 2', 200))
+    orcamento.adiciona_item(Item('ITEM - 3', 250))
 
     calculador.realiza_calculo(orcamento, ISS())
     calculador.realiza_calculo(orcamento, ICMS())
 
-    #duck typing
+    print('ICPP e IKCV')
+
+    calculador.realiza_calculo(orcamento, ICPP())
+    calculador.realiza_calculo(orcamento, IKCV())
+
+
 
