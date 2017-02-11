@@ -21,13 +21,24 @@ if __name__== '__main__':
     orcamento.adiciona_item(Item('ITEM - 2', 200))
     orcamento.adiciona_item(Item('ITEM - 3', 250))
 
+    print('ISS e ICMS')
+
     calculador.realiza_calculo(orcamento, ISS())
     calculador.realiza_calculo(orcamento, ICMS())
+
+    print('ISS com ICMS')
+    calculador.realiza_calculo(orcamento, ISS(ICMS()))
+
 
     print('ICPP e IKCV')
 
     calculador.realiza_calculo(orcamento, ICPP())
     calculador.realiza_calculo(orcamento, IKCV())
+
+    print('ICPP com IKCV')
+    calculador.realiza_calculo(orcamento, ICPP(IKCV()))
+
+
 
 
 
