@@ -76,3 +76,4 @@ if __name__ == '__main__':
     orcamento.estado_atual = Orcamento.APROVADO
     orcamento.aplica_desconto_extra()
     print('Valor com desconto extra (aprovado) %s' % (orcamento.valor))
+    
