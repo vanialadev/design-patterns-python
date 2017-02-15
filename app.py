@@ -1,15 +1,8 @@
 # -*- coding: UTF-8 -*-
-import MySQLdb
-from connection_factory import get_connection
 
-# connection=MySQLdb.connect(
-#         host='localhost',
-#         user='root',
-#         password='',
-#         db='alura'
-# )
+from connection_factory import Connection_Factory
 
-connection = get_connection()
+connection = Connection_Factory().get_connection()
 
 cursor = connection.cursor()
 
